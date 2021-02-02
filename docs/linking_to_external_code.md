@@ -1,3 +1,7 @@
+---
+lastAuthor: zapcannon321
+lastEdited: 1612299503387
+---
 # Linking to third party code
 
 In the [Getting Started](./getting_started.md) section, we saw Deno could
@@ -36,10 +40,10 @@ is not specified. The next time you run the program, no downloads will be made.
 If the program hasn't changed, it won't be recompiled either. The default
 directory is:
 
-- On Linux/Redox: `$XDG_CACHE_HOME/deno` or `$HOME/.cache/deno`
-- On Windows: `%LOCALAPPDATA%/deno` (`%LOCALAPPDATA%` = `FOLDERID_LocalAppData`)
-- On macOS: `$HOME/Library/Caches/deno`
-- If something fails, it falls back to `$HOME/.deno`
+* On Linux/Redox: `$XDG_CACHE_HOME/deno` or `$HOME/.cache/deno`
+* On Windows: `%LOCALAPPDATA%/deno` (`%LOCALAPPDATA%` = `FOLDERID_LocalAppData`)
+* On macOS: `$HOME/Library/Caches/deno`
+* If something fails, it falls back to `$HOME/.deno`
 
 ## FAQ
 
@@ -90,7 +94,7 @@ can learn more about this
 
 ### But what if the host of the URL goes down? The source won't be available.
 
-This, like the above, is a problem faced by _any_ remote dependency system.
+This, like the above, is a problem faced by *any* remote dependency system.
 Relying on external servers is convenient for development but brittle in
 production. Production software should always vendor its dependencies. In Node
 this is done by checking `node_modules` into source control. In Deno this is
@@ -108,3 +112,5 @@ DENO_DIR=./deno_dir deno test src
 git add -u deno_dir
 git commit
 ```
+
+\

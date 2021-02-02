@@ -1,8 +1,14 @@
+---
+lastAuthor: sonny3690
+lastEdited: 1612303087241
+---
 ## Installation
 
 Deno works on macOS, Linux, and Windows. Deno is a single binary executable. It
 has no external dependencies.
 
+\
+\
 ### Download and install
 
 [deno_install](https://github.com/denoland/deno_install) provides convenience

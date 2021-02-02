@@ -1,16 +1,19 @@
+---
+lastAuthor: sonny3690
+lastEdited: 1612303096646
+---
 ## Internal details
 
 ### Deno and Linux analogy
-
-|                       **Linux** | **Deno**                                     |
-| ------------------------------: | :------------------------------------------- |
-|                       Processes | Web Workers                                  |
-|                        Syscalls | Ops                                          |
-|           File descriptors (fd) | [Resource ids (rid)](architecture#resources) |
-|                       Scheduler | Tokio                                        |
-| Userland: libc++ / glib / boost | https://deno.land/std/                       |
-|                 /proc/\$\$/stat | [Deno.metrics()](architecture#metrics)       |
-|                       man pages | deno types                                   |
+| **Linux** | **Deno** |
+|---:|:---|
+| Processes | Web Workers |
+| Syscalls | Ops |
+| File descriptors (fd) | [Resource ids (rid)](architecture#resources) |
+| Scheduler | Tokio |
+| Userland: libc++ / glib / boost | https://deno.land/std/ |
+| /proc/$$/stat | [Deno.metrics()](architecture#metrics) |
+| man pages | deno types |
 
 #### Resources
 
@@ -50,9 +53,11 @@ Metrics is Deno's internal counter for various statistics.
 
 ### Conference
 
-- Ryan Dahl. (May 27, 2020).
+* Ryan Dahl. (May 27, 2020).
   [An interesting case with Deno](https://www.youtube.com/watch?v=1b7FoBwxc7E).
   Deno Israel.
-- Bartek Iwańczuk. (Oct 6, 2020).
+* Bartek Iwańczuk. (Oct 6, 2020).
   [Deno internals - how modern JS/TS runtime is
   built](https://www.youtube.com/watch?v=AOvg_GbnsbA&t=35m13s). Paris Deno.
+
+\
