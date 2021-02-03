@@ -1,12 +1,16 @@
+---
+lastAuthor: erulabs
+lastEdited: 1612308866689
+---
 # Fetch data
 
 ## Concepts
 
-- Like browsers, Deno implements web standard APIs such as
+* Like browsers, Deno implements web standard APIs such as
   [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
-- Deno is secure by default, meaning explicit permission must be granted to
+* Deno is secure by default, meaning explicit permission must be granted to
   access the network.
-- See also: Deno's [permissions](../getting_started/permissions.md) model.
+* See also: Deno's [permissions](../getting_started/permissions.md) model.
 
 ## Overview
 
@@ -26,7 +30,7 @@ command.
 
 **Command:** `deno run --allow-net fetch.ts`
 
-```js
+```javascript
 /**
  * Output: JSON Data
  */
@@ -56,3 +60,8 @@ const error = fetch("https://does.not.exist/");
 
 error.catch((error) => console.log(error.message));
 ```
+
+\
+Some change!
+
+\

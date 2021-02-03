@@ -1,6 +1,6 @@
 ---
 lastAuthor: sonny3690
-lastEdited: 1612303149993
+lastEdited: 1612303480795
 ---
 # Contributing
 
@@ -15,6 +15,11 @@ lastEdited: 1612303149993
 * Please be professional in the forums. We follow [Rust's code of conduct](https://www.rust-lang.org/policies/code-of-conduct)
   (CoC). Have a problem? Email ry@tinyclouds.org.
 
+\
+# Header
+
+\
+\
 ## Development
 
 Instructions on how to build from source can be found [here](./contributing/building_from_source.md).
