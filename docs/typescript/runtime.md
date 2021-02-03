@@ -1,3 +1,7 @@
+---
+lastAuthor: sonny3690
+lastEdited: 1612339843175
+---
 ## Runtime compiler APIs
 
 > ⚠️ The runtime compiler API is unstable (and requires the `--unstable` flag to
@@ -80,7 +84,7 @@ Using external sources, both local and remote, `Deno.emit()` can behave like
 `deno cache` does on the command line, resolving those external dependencies,
 type checking those dependencies, and providing an emitted output.
 
-By default, `Deno.emit()` will utilise external resources. The _rootSpecifier_
+By default, `Deno.emit()` will utilise external resources. The *rootSpecifier*
 supplied as the first argument will determine what module will be used as the
 root. The root module is similar to what you would provide on the command line.
 
@@ -107,11 +111,11 @@ try {
 standard CLI does, and it inherits the permissions and cache options of the
 process that executes it.
 
-If the _rootSpecifier_ is a relative path, then the current working directory of
+If the *rootSpecifier* is a relative path, then the current working directory of
 the Deno process will be used to resolve the specifier. (Not relative to the
 current module!)
 
-The _rootSpecifier_ can be a string file path, a string URL, or a URL.
+The *rootSpecifier* can be a string file path, a string URL, or a URL.
 `Deno.emit()` supports the same protocols for URLs that Deno supports, which are
 currently `file`, `http`, `https`, and `data`.
 
@@ -119,10 +123,10 @@ currently `file`, `http`, `https`, and `data`.
 
 Instead of resolving modules externally, you can provide `Deno.emit()` with the
 sources directly. This is especially useful for a server to be able to provide
-_on demand_ compiling of code supplied by a user, where the Deno process has
+*on demand* compiling of code supplied by a user, where the Deno process has
 collected all the code it wants to emit.
 
-The sources are passed in the _sources_ property of the `Deno.emit()` _options_
+The sources are passed in the *sources* property of the `Deno.emit()` *options*
 argument:
 
 ```ts
@@ -147,7 +151,7 @@ By default, `Deno.emit()` will type check any TypeScript (and TSX) it
 encounters, just like on the command line. It will also attempt to transpile
 JSX, but will leave JavaScript "alone". This behavior can be changed by changing
 the compiler options. For example if you wanted Deno to type check your
-JavaScript as well, you could set the _checkJs_ option to `true` in the compiler
+JavaScript as well, you could set the *checkJs* option to `true` in the compiler
 options:
 
 ```ts
@@ -179,7 +183,7 @@ if (diagnostics.length) {
 ### Bundling
 
 `Deno.emit()` is also capable of providing output similar to `deno bundle` on
-the command line. This is enabled by setting the _bundle_ option to `"esm"`.
+the command line. This is enabled by setting the *bundle* option to `"esm"`.
 (Currently Deno only supports bundling as a single file ES module, but there are
 plans to add support for an IIFE bundle format as well):
 
@@ -189,7 +193,7 @@ const { files, diagnostics } = await Deno.emit("./mod.ts", {
 });
 ```
 
-The _files_ of the result will contain a single key named `deno:///bundle.js` of
+The *files* of the result will contain a single key named `deno:///bundle.js` of
 which the value with be the resulting bundle.
 
 > ⚠️ Just like with `deno bundle`, the bundle will not include things like
@@ -209,7 +213,7 @@ import map doesn't contain any relative URLs. The URL does not need to really
 exist, it is just feed to the API.
 
 An example might be that I want to use a bare specifier to load a special
-version of _lodash_ I am using with my project. I could do the following:
+version of *lodash* I am using with my project. I could do the following:
 
 ```ts
 const { files } = await Deno.emit("mod.ts", {
@@ -231,7 +235,7 @@ const { files } = await Deno.emit("mod.ts", {
 ### Skip type checking/transpiling only
 
 `Deno.emit()` supports skipping type checking similar to the `--no-check` flag
-on the command line. This is accomplished by setting the _check_ property to
+on the command line. This is accomplished by setting the *check* property to
 `false`:
 
 ```ts
@@ -240,7 +244,7 @@ const { files } = await Deno.emit("./mod.ts", {
 });
 ```
 
-Setting _check_ to `false` will instruct Deno to not utilise the TypeScript
+Setting *check* to `false` will instruct Deno to not utilise the TypeScript
 compiler to type check the code and emit it, instead only transpiling the code
 from within Deno. This can be significantly quicker than doing the full type
 checking.
@@ -259,10 +263,12 @@ along with their default values and are built into the Deno types.
 If you are type checking your code, the compiler options will be type checked
 for you, but if for some reason you are either dynamically providing the
 compiler options or are not type checking, then the result of `Deno.emit()` will
-provide you with an array of _ignoredOptions_ if there are any.
+provide you with an array of *ignoredOptions* if there are any.
 
 > ⚠️ we have only tried to disable/remove options that we know won't work, that
 > does not mean we extensively test all options in all configurations under
 > `Deno.emit()`. You may find that some behaviors do not match what you can get
 > from `tsc` or are otherwise incompatible. If you do find something that
 > doesn't work, please do feel free to raise an issue.
+
+\
