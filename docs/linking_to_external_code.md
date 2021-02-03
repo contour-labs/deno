@@ -1,6 +1,6 @@
 ---
-lastAuthor: zapcannon321
-lastEdited: 1612299503387
+lastAuthor: sonny3690
+lastEdited: 1612321399077
 ---
 # Linking to third party code
 
@@ -45,6 +45,13 @@ directory is:
 * On macOS: `$HOME/Library/Caches/deno`
 * If something fails, it falls back to `$HOME/.deno`
 
+\
+# Deep Source
+
+* is awesome :)
+
+\
+\
 ## FAQ
 
 ### How do I import a specific version of a module?
